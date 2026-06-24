@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nicharat Kuljaroenwirat — Project-Based Portfolio</title>
+<meta name="description" content="Project-based portfolio of Nicharat Kuljaroenwirat — Senior Marketing Manager, Gaming &amp; Digital, SEA / APAC." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --hero-bg:#A9BFDF;
+    --ink:#2C3340;
+    --ink-soft:#3A3F4A;
+    --accent:#3B5D8F;
+    --accent-deep:#1F4E87;
+    --accent-bright:#2766B1;
+    --eyebrow:#4472C4;
+    --muted:#6B7280;
+    --muted-2:#9AA3B2;
+    --link:#0563C1;
+    --rule:#A9BFDF;
+    --card:#F1F4F9;
+    --card-2:#EEF3FB;
+    --chip:#E7ECF6;
+    --chip-strong:#DCE6F6;
+    --chip-border:#CDD9EC;
+    --white:#FFFFFF;
+    --shadow:0 1px 2px rgba(31,78,135,.06),0 8px 24px rgba(31,78,135,.06);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--ink);background:var(--white);line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.font-head{font-family:'Poppins','Inter',sans-serif;}
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--hero-bg);color:var(--white);}
+  .hero-inner{
+    max-width:1120px;margin:0 auto;padding:64px 28px 56px;
+    display:grid;grid-template-columns:1.45fr .9fr;gap:40px;align-items:center;
+  }
+  .eyebrow{font-weight:600;letter-spacing:.16em;font-size:13px;text-transform:uppercase;color:#23457e;}
+  .hero h1{
+    font-weight:700;font-size:clamp(40px,6vw,76px);line-height:1.02;
+    margin:18px 0 14px;color:var(--white);letter-spacing:-.5px;
+  }
+  .hero .role{font-family:'Poppins',sans-serif;font-weight:600;font-size:clamp(18px,2.2vw,26px);color:#1d3f78;margin:0;}
+  .hero .scope{font-size:clamp(14px,1.6vw,18px);color:#3a5994;margin-top:6px;}
+  .photo{
+    justify-self:center;width:100%;max-width:300px;aspect-ratio:4/5;
+    border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(20,40,80,.22);
+    border:5px solid rgba(255,255,255,.55);
+  }
+  .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hero-contact{background:rgba(255,255,255,.16);}
+  .hero-contact .wrap{
+    display:flex;flex-wrap:wrap;gap:8px 34px;padding-top:16px;padding-bottom:16px;
+    font-size:14.5px;color:#1d3f78;font-weight:500;
+  }
+  .hero-contact a{color:#1d3f78;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:64px 0;}
+  .sec-label{
+    font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:.14em;
+    font-size:13px;text-transform:uppercase;color:var(--accent-bright);margin:0 0 18px;
+  }
+
+  /* ---------- PROFILE ---------- */
+  .lead{font-size:clamp(20px,2.6vw,30px);line-height:1.38;color:var(--ink);margin:0 0 18px;max-width:1000px;font-weight:400;}
+  .lead b{color:var(--accent);font-weight:600;}
+  .subline{font-size:clamp(15px,1.8vw,19px);color:var(--muted);margin:0 0 40px;}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .stat{background:var(--card);border:1px solid var(--chip-border);border-radius:14px;padding:24px 22px;}
+  .stat .num{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(30px,3.4vw,40px);color:var(--accent-deep);line-height:1;}
+  .stat .lbl{margin-top:10px;font-size:14px;color:var(--ink-soft);}
+
+  /* ---------- PROJECTS ---------- */
+  .projects{background:#F7F9FC;}
+  .proj{
+    background:var(--white);border:1px solid var(--chip-border);border-radius:18px;
+    padding:26px 28px;margin-bottom:26px;box-shadow:var(--shadow);
+  }
+  .proj-head{display:grid;grid-template-columns:96px 1fr;gap:22px;align-items:start;}
+  .thumb{width:96px;height:96px;border-radius:14px;overflow:hidden;border:1px solid var(--chip-border);flex:none;background:var(--card);}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .proj-titles .topline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+  .pnum{font-family:'Poppins',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-bright);}
+  .badge{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-deep);background:var(--chip-strong);border:1px solid var(--chip-border);border-radius:999px;padding:3px 12px;}
+  .proj-titles h3{font-size:clamp(24px,2.8vw,34px);font-weight:700;color:var(--accent);margin:2px 0 4px;line-height:1.08;}
+  .tagline{color:var(--muted);font-size:15px;margin:0;}
+
+  .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:22px 0 4px;border-top:1px solid #E9EEF6;border-bottom:1px solid #E9EEF6;}
+  .meta .cell{padding:14px 18px;border-left:1px solid #E9EEF6;}
+  .meta .cell:first-child{border-left:none;padding-left:0;}
+  .meta .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);font-weight:600;}
+  .meta .v{font-size:15px;color:var(--ink);margin-top:4px;font-weight:500;}
+
+  .chips-block{margin:20px 0 4px;}
+  .chips-block .h{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);font-weight:600;margin-bottom:9px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{font-size:13px;border-radius:999px;padding:5px 13px;border:1px solid var(--chip-border);}
+  .chip.skill{background:var(--chip-strong);color:var(--accent-deep);font-weight:600;}
+  .chip.chan{background:var(--card-2);color:var(--accent);font-weight:500;}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;}
+  .panel{background:var(--card-2);border:1px solid var(--chip-border);border-radius:14px;padding:6px 22px 20px;}
+  .panel .phead{
+    font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    font-size:12.5px;color:var(--accent-deep);text-align:center;
+    background:linear-gradient(180deg,#E3ECFA,#D6E2F4);border:1px solid var(--chip-border);
+    border-radius:999px;padding:7px 0;margin:16px auto 16px;max-width:280px;
+  }
+  .resp p{margin:0 0 13px;font-size:14.5px;color:var(--ink-soft);line-height:1.5;}
+  .resp p:last-child{margin-bottom:4px;}
+  .resp .rlabel{color:var(--accent);font-weight:600;}
+  .res-group{margin-bottom:14px;}
+  .res-group .gh{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-bright);margin:2px 0 8px;}
+  ul.res{list-style:none;margin:0;padding:0;}
+  ul.res li{position:relative;padding-left:18px;margin-bottom:10px;font-size:14.5px;color:var(--ink-soft);line-height:1.5;}
+  ul.res li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent-bright);}
+  ul.res li b{color:var(--accent-deep);font-weight:700;}
+  .resp p b{color:var(--accent-deep);font-weight:700;}
+
+  .refs{margin-top:18px;padding-top:14px;border-top:1px solid #E9EEF6;font-size:13.5px;color:var(--muted);}
+  .refs .rk{font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted-2);margin-right:10px;}
+  .refs a{margin-right:6px;}
+  .refs .sep{color:var(--rule);margin:0 6px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--hero-bg);color:#1d3f78;padding:46px 0;}
+  footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;}
+  footer .name{font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;color:#16336a;}
+  footer .contact{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:14.5px;font-weight:500;}
+  footer a{color:#1d3f78;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:880px){
+    .hero-inner{grid-template-columns:1fr;text-align:center;gap:28px;padding-top:48px;}
+    .photo{order:-1;max-width:230px;}
+    .eyebrow{display:block;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .meta{grid-template-columns:repeat(2,1fr);}
+    .meta .cell{border-left:none;padding-left:0;border-top:1px solid #E9EEF6;}
+    .meta .cell:first-child,.meta .cell:nth-child(2){border-top:none;}
+    .cols{grid-template-columns:1fr;}
+  }
+  @media(max-width:560px){
+    section{padding:46px 0;}
+    .wrap{padding:0 18px;}
+    .proj{padding:20px 18px;}
+    .proj-head{grid-template-columns:1fr;}
+    .thumb{width:84px;height:84px;}
+    .stats{grid-template-columns:1fr;}
+    .meta{grid-template-columns:1fr;}
+    .meta .cell{border-top:1px solid #E9EEF6;}
+    .meta .cell:first-child{border-top:none;}
+    .hero-contact .wrap{flex-direction:column;gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Project-Based Portfolio</span>
+      <h1>Nicharat<br>Kuljaroenwirat</h1>
+      <p class="role">Senior Marketing Manager</p>
+      <p class="scope">Gaming &amp; Digital · SEA / APAC · Bangkok, Thailand</p>
+    </div>
+    <div class="photo"><img src="assets/profile.jpg" alt="Nicharat Kuljaroenwirat" /></div>
+  </div>
+  <div class="hero-contact">
+    <div class="wrap">
+      <span>Bangkok, Thailand</span>
+      <span>(+66) 0956622692</span>
+      <a href="mailto:nicha.kjj@gmail.com">nicha.kjj@gmail.com</a>
+      <a href="https://linkedin.com/in/nicha-k" target="_blank" rel="noopener">linkedin.com/in/nicha-k</a>
+    </div>
+  </div>
+</header>
+
+<section id="profile">
+  <div class="wrap">
+    <p class="sec-label">Short Profile</p>
+    <p class="lead">Data-driven marketing professional with <b>8+ years</b> driving full-funnel growth across <b>SEA and APAC</b> — scaling acquisition, managing multi-million-dollar budgets, and partnering closely with product &amp; community management and creative teams.</p>
+    <p class="subline">4+ years leading cross-regional teams across Thailand and Taiwan.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">10+</div><div class="lbl">Years in gaming industry</div></div>
+      <div class="stat"><div class="num">40+</div><div class="lbl">Regional &amp; global projects</div></div>
+      <div class="stat"><div class="num">+$24M</div><div class="lbl">Total budget handled across TH, SEA, TW/HK/MO, AU/NZ, and expanded global markets</div></div>
+      <div class="stat"><div class="num">~10</div><div class="lbl">Cross-regional team led</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <p class="sec-label">Selected Projects · 11</p>
+    <div id="proj-list"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="name">Nicharat K. (Nicha)</div>
+    <div class="contact">
+      <span>Bangkok, Thailand</span>
+      <span>(+66) 0956622692</span>
+      <a href="mailto:nicha.kjj@gmail.com">nicha.kjj@gmail.com</a>
+      <a href="https://linkedin.com/in/nicha-k" target="_blank" rel="noopener">linkedin.com/in/nicha-k</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const projects = [
+{
+  num:"Project 01 / 11", badge:"Own Publishing", title:"Black Beacon",
+  tagline:"Glohow's 1st global self-publishing — full-funnel launch", img:"assets/proj01_black-beacon.jpg",
+  client:"Glohow (owned project)", region:"Global", period:"Dec 2024 – Jul 2025", category:"Mobile App (Game)",
+  skills:["Budget Management","Leadership","Strategy & Planning","XFN Collaboration"],
+  channels:["ASO","KOL","EDM","Online Media","PR / Editorial","Performance (UA)","Social","Website"],
+  resp:[
+    ["Strategy","Led the full-funnel master plan end-to-end; optimized per CEO direction and presented results to all stakeholders."],
+    ["Leadership","Owned budget & cost control; reported to project owner and CEO. Crafted the Google Feature pitch deck."],
+    ["XFN","Partnered with community management on shared-budget control and content marketing."]
+  ],
+  results:[{items:[
+    "Spent <b>53%</b> of target budget; drove <b>2×</b> target installs in first month.",
+    "<b>40+</b> global outlets incl. IGN featured the press release.",
+    "<b>90+</b> paid influencer pieces, <b>2M+</b> views by D7, <b>~40%</b> above benchmark.",
+    "Branding momentum drove UA CPI <b>~5× lower</b> than market benchmark."
+  ]}],
+  refs:[["Ref #1","https://docs.google.com/presentation/d/e/2PACX-1vSH7WBdTXl1rII8N4lWRoIniu51qqIJJ8d42XPH_9WoEIqW6lB0Wrcmea2c9irVR1sKb7P217Sr8E2I/pub?start=false&loop=false&delayms=3000"]]
+},
+{
+  num:"Project 02 / 11", badge:"Co-Publishing", title:"Guardian Tales",
+  tagline:"Regional full-funnel, long-term ROAS focus", img:"assets/proj02_guardian-tales.jpg",
+  client:"Kakao Games", region:"SEA, TW/HK/MO", period:"Feb 2020 – Jun 2024", category:"Mobile App (Game)",
+  skills:["Account Management","Budget Management","Leadership","Strategy & Planning","XFN Collaboration"],
+  channels:["ASO","KOL","Email","OOH","Online Media","PR / Editorial","Performance (UA)","Search Ads"],
+  resp:[
+    ["Strategy","Led the regional launch plan & proposal, aligned to the global launch direction."],
+    ["Leadership","Led the internal team end-to-end incl. TW offline activities; budget & cost management."],
+    ["XFN","Worked with internal teams and Kakao Games (KR & NAEU) for the global launch."],
+    ["Account","Main POC sustaining productive internal & external relationships."]
+  ],
+  results:[{items:[
+    "Sustained an evergreen performance campaign for <b>4 years</b>, until the co-publishing contract ended.",
+    "Ran a cross-industry brand collaboration in Taiwan.",
+    "ROAS <b>&gt;100%</b> from D7 across the first <b>3 months</b>; held revenue-per-install in line with organic."
+  ]}],
+  refs:[
+    ["Ref #1","assets/ref/guardian-tales-1.png"],
+    ["Ref #2","https://forum.gamer.com.tw/C.php?bsn=38113&snA=12248"]
+  ]
+},
+{
+  num:"Project 03 / 11", badge:"Agency", title:"Ragnarok: The Lost Memories",
+  tagline:"From pitching to launch — full-funnel campaign", img:"assets/proj03_ragnarok.jpg",
+  client:"Gravity Game Tech", region:"Thailand", period:"Jul 2021 – Sep 2021", category:"Cross-Platform (Game)",
+  skills:["Account Management","Budget Management","Execution & Optimization","Leadership","Strategy & Planning"],
+  channels:["KOL","Online Media","PR / Editorial","Performance (UA)"],
+  resp:[
+    ["Strategy","Led the pitch deck to the client RFP; optimized the plan to meet the goal."],
+    ["Leadership","Led the associate members on the online branding campaign end-to-end; budget & cost management."],
+    ["Execution","Coordinated directly with the client on end-to-end KOL campaigns."],
+    ["Account","Sub-POC for project management; influencer & branding focus."]
+  ],
+  results:[{items:[
+    "Won the bid and built a long-term relationship, continued RFP invitations for other projects.",
+    "Delivered seamless management and hit the target install KPI.",
+    "Published <b>150</b> contents by <b>15 KOLs</b> in <b>30 days</b>."
+  ]}],
+  refs:[["Ref #1","https://www.youtube.com/hashtag/thelostmemories"]]
+},
+{
+  num:"Project 04 / 11", badge:"Agency", title:"Civilization: Eras & Allies",
+  tagline:"From pitching to launch — heavy regional performance", img:"assets/proj04_civilization.jpg",
+  client:"Take-Two Asia (2K)", region:"AU/NZ, KR, SEA, TW/HK/MO", period:"Apr 2024 – Dec 2025", category:"Mobile App (Game)",
+  skills:["Account Management","Budget Management","Leadership","Strategy & Planning","XFN Collaboration"],
+  channels:["ASO","KOL","Online Media","PR / Editorial","Performance (UA)"],
+  resp:[
+    ["Strategy","Led the regional pitch deck per client brief; presented the plan with C-level."],
+    ["Leadership","Owned project management & timeline; led the team end-to-end with regular & ad-hoc reporting. Full budget & cost management."],
+    ["XFN","Coordinated with community management on budget control & report consolidation."],
+    ["Account","Built strong client relationships through weekly meetings."]
+  ],
+  results:[{items:[
+    "Client praised the project management, reporting and performance-marketing expertise.",
+    "Hit daily product KPIs (DAU, in-app actions) within target CPI.",
+    "Trusted to additionally manage <b>KR</b> and <b>TW/HK/MO</b>, transferred from other agencies."
+  ]}],
+  refs:[
+    ["Ref #1","https://www.facebook.com/share/p/191rSxnWWd/"],
+    ["Ref #2","https://www.facebook.com/share/p/172ou6PjzE/"],
+    ["Ref #3","https://geekculture.co/geek-giveaway-civilization-eras-and-allies-merchandise-set/"]
+  ]
+},
+{
+  num:"Project 05 / 11", badge:"Agency", title:"Legend of YMIR",
+  tagline:"End-to-end regional marketing (TH, PH)", img:"assets/proj05_ymir.jpg",
+  client:"Wemade", region:"Thailand, Philippines", period:"Oct 2025 – Apr 2026", category:"Cross-Platform (Game)",
+  skills:["Budget Management","Execution & Optimization","Leadership","Strategy & Planning","XFN Collaboration"],
+  channels:["Content Creator / KOL","Offline Event","Online Media","PR / Editorial"],
+  resp:[
+    ["Strategy","Planned the online/offline media mix to client direction & goals."],
+    ["Leadership","Led the end-to-end TH & PH campaign on timeline; controlled budget & execution."],
+    ["XFN","Main coordinator between internal teams and local vendors/agencies."],
+    ["Execution","Ran top-tier influencer ops and an offline event with an external vendor."]
+  ],
+  results:[
+    {group:"Key Results — TH", items:[
+      "Secured <b>23 influencers</b> live on launch date within <b>1 week</b>.",
+      "Closed a deal with top-tier influencer group (total of <b>+10M subs</b>) at <b>5% lower</b> price.",
+      "Smooth offline event with positive partner feedback & organic posts."
+    ]},
+    {group:"Key Results — PH", items:[
+      "Secured <b>6</b> top MMORPG influencers; got freebies and drove <b>10% higher</b> awareness.",
+      "Offline event hit over <b>70%</b> participation rate — above client expectation."
+    ]}
+  ],
+  refs:[
+    ["Ref #1","assets/ref/ymir-1.png"],
+    ["Ref #2","https://youtu.be/YWEj4cBK1L4?si=FpEOKtATjcQZ-plz&t=62"],
+    ["Ref #3","https://youtu.be/1Ug7puYrZSk"]
+  ]
+},
+{
+  num:"Project 06 / 11", badge:"Agency", title:"Blue Archive",
+  tagline:"Major update — cosplayer & influencer content (TH, SG&MY)", img:"assets/proj06_blue-archive.jpg",
+  client:"Nexon Thailand", region:"SEA", period:"Q2 & Q4 2025, Q2 2026", category:"Mobile App (Game)",
+  skills:["Account Management","Budget Management","Execution & Optimization","Leadership"],
+  channels:["Content Creator / KOL","Production"],
+  resp:[
+    ["Leadership","Led the team on cosplayer & game-influencer content across TH, SG & MY (Travelled to TH) per client plan. Full budget & cost management."],
+    ["Execution","Ran the production timeline and on-site management with the internal team."],
+    ["Account","Main POC ensuring quality & client satisfaction; provided on-site support."]
+  ],
+  results:[
+    {group:"Jun – Jul 2025", items:[
+      "Delivered all production items flawlessly within client requirements & budget.",
+      "<b>522K</b> views in <b>7 days</b> across TH, SG & MY via <b>15</b> influencer content pieces."
+    ]},
+    {group:"Nov – Dec 2025 and Apr – Jun 2026", items:[
+      "Delivered flawlessly within client requirements & budget."
+    ]}
+  ],
+  refs:[
+    ["Ref #1","https://www.facebook.com/share/p/1BTSzm6sj8/"],
+    ["Ref #2","https://www.youtube.com/watch?v=S-YAAHgOjJA"],
+    ["Ref #3","https://www.facebook.com/share/p/14jxJUYx1yc/"],
+    ["Ref #4","https://www.facebook.com/share/p/1AY637zwjP/"]
+  ]
+},
+{
+  num:"Project 07 / 11", badge:"Agency", title:"Monster Hunter Wilds",
+  tagline:"Launch awareness on Netflix & Twitch (AU / NZ)", img:"assets/proj07_monster-hunter.jpg",
+  client:"J2B (Capcom's agency)", region:"AU/NZ", period:"Feb 2025 – Mar 2025", category:"PC / Console Game",
+  skills:["Account Management","Budget Management","Execution & Optimization","Strategy & Planning"],
+  channels:["OTT Ad"],
+  resp:[
+    ["Strategy","Proposed ad options within the client's budget & objective."],
+    ["Execution","Ran video-ad campaigns on Twitch (Amazon DSP) and Netflix targeting AU/NZ; budget & cost management."],
+    ["Account","Maintained client & vendor relationships for seamless, on-time delivery."]
+  ],
+  results:[{items:[
+    "Delivered <b>14 Feb – 7 Mar</b>; <b>4.9M impressions</b>, CPM <b>20% lower</b> than the media benchmark."
+  ]}],
+  refs:[
+    ["Ref #1","assets/ref/monster-hunter-1.png"],
+    ["Ref #2","assets/ref/monster-hunter-2.png"]
+  ]
+},
+{
+  num:"Project 08 / 11", badge:"Agency", title:"Sudden Attack: Zero Point",
+  tagline:"Focus-group test — 2-day on-site with 30 testers", img:"assets/proj08_sudden-attack.jpg",
+  client:"Nexon Thailand & Korea", region:"Thailand", period:"Jul 2025", category:"PC / Console Game",
+  skills:["Account Management","Budget Management","Execution & Optimization","Leadership","XFN Collaboration"],
+  channels:["Offline Event"],
+  resp:[
+    ["Leadership","Led end-to-end event management from kickoff with client & XFN team. Full budget & cost management."],
+    ["Execution","Ran the event timeline & on-site management with the internal team."],
+    ["XFN","Worked with community management to recruit & manage testers and run on-site ops."],
+    ["Account","Main POC ensuring quality; on-site support & post-event feedback."]
+  ],
+  results:[{items:[
+    "Recruited <b>30 FPS testers</b> and ran a seamless <b>2-day event</b> in full alignment with client requirements & budget."
+  ]}],
+  refs:[
+    ["Ref #1","assets/ref/sudden-attack-1.png"],
+    ["Ref #2","https://www.facebook.com/share/p/18uh99v4q3/"]
+  ]
+},
+{
+  num:"Project 09 / 11", badge:"Agency", title:"Kakao Webtoon",
+  tagline:"Comics platform — long-term retention campaign", img:"assets/proj09_kakao-webtoon.jpg",
+  client:"Kakao Entertainment", region:"Thailand", period:"Jun 2021 – Dec 2023", category:"Cross-Platform (Comics)",
+  skills:["Account Management","Budget Management","Leadership"],
+  channels:["Performance (UA)","Search Ads"],
+  resp:[
+    ["Leadership","Oversaw campaign analysis & reporting; led the team to deliver growth campaigns to KPIs. Budget & cost management."],
+    ["Account","Main POC for UA performance, sustaining strong internal & external relationships."]
+  ],
+  results:[{items:[
+    "Sustained an evergreen performance campaign for <b>3 years</b> with <b>0% CPI change YoY</b>, meeting the client's monthly KPI."
+  ]}],
+  refs:[["Ref #1","https://docs.google.com/presentation/d/e/2PACX-1vT0lEcjZ_iJ0WWT9qzBsTlfHGTaauqZB0SMAoHR-OAEZ0dQBPu7GLXrDEmedEx2F6NLYaCYiDm1tBot/pub?start=false&loop=false&delayms=3000"]]
+},
+{
+  num:"Project 10 / 11", badge:"Agency", title:"AESTURA",
+  tagline:"Product re-launch — end-to-end social & CPAS", img:"assets/proj10_aestura.jpg",
+  client:"Amorepacific (KR)", region:"Thailand", period:"Oct 2023 – Apr 2024", category:"Beauty (Skincare)",
+  skills:["Account Management","Budget Management","Leadership"],
+  channels:["Content Creator / KOL","Social Media Marketing","CPAS"],
+  resp:[
+    ["Strategy","Led the pitch deck per client brief; presented with C-level."],
+    ["Leadership","Led the team on social content & event plan plus regular client reporting. Full budget & cost management."]
+  ],
+  results:[{items:[
+    "Won the bid and built a positive client relationship.",
+    "<b>6,931</b> followers and <b>271K</b> page visits on Facebook via giveaway, engagement & CPAS ads (Lazada 4.4).",
+    "Launched a product-trial campaign with <b>500 participants</b>; <b>14%</b> organic UGC reviews."
+  ]}],
+  refs:[
+    ["Ref #1","assets/ref/aestura-1.png"],
+    ["Ref #2","assets/ref/aestura-2.png"]
+  ]
+},
+{
+  num:"Project 11 / 11", badge:"Agency", title:"HERA",
+  tagline:"Pitching proposal for product launch", img:"assets/proj11_hera.jpg",
+  client:"Amorepacific (TH)", region:"Thailand", period:"Mar 2024", category:"Beauty (Cosmetic)",
+  skills:["Leadership","Strategy & Planning"],
+  channels:["Content Creator / KOL","OOH","Offline Event","Social Media Marketing"],
+  resp:[
+    ["Strategy","Co-led the pitch deck per client brief with a brand-marketing teammate; presented with C-level."],
+    ["Leadership","Worked closely with the team on social content & event plan plus regular client reporting."]
+  ],
+  results:[{items:[
+    "Praised for the deck and plan.",
+    "Did not win the bid — no beauty-category infrastructure in the company; client chose another brand/commerce agency. A candid look at range and learning."
+  ]}],
+  refs:[["Ref #1","https://docs.google.com/presentation/d/1CvBWTtaHtLadj1Pl7k6bENVouJx23niT_4DwCPbQ1Cc/preview?usp=sharing"]]
+}
+];
+
+function resultsHTML(results){
+  return results.map(g=>{
+    const head = g.group ? `<div class="gh">${g.group}</div>` : "";
+    const lis = g.items.map(i=>`<li>${i}</li>`).join("");
+    return `<div class="res-group">${head}<ul class="res">${lis}</ul></div>`;
+  }).join("");
+}
+
+function projHTML(p){
+  const skills = p.skills.map(s=>`<span class="chip skill">${s}</span>`).join("");
+  const chans = p.channels.map(c=>`<span class="chip chan">${c}</span>`).join("");
+  const resp = p.resp.map(r=>`<p><span class="rlabel">${r[0]}:</span> ${r[1]}</p>`).join("");
+  const refs = p.refs.map(r=>`<a href="${r[1]}" target="_blank" rel="noopener">${r[0]}</a>`).join('<span class="sep">|</span>');
+  return `
+  <article class="proj">
+    <div class="proj-head">
+      <div class="thumb"><img src="${p.img}" alt="${p.title}" loading="lazy" /></div>
+      <div class="proj-titles">
+        <div class="topline"><span class="pnum">${p.num}</span><span class="badge">${p.badge}</span></div>
+        <h3>${p.title}</h3>
+        <p class="tagline">${p.tagline}</p>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="cell"><div class="k">Client</div><div class="v">${p.client}</div></div>
+      <div class="cell"><div class="k">Region</div><div class="v">${p.region}</div></div>
+      <div class="cell"><div class="k">Period</div><div class="v">${p.period}</div></div>
+      <div class="cell"><div class="k">Category</div><div class="v">${p.category}</div></div>
+    </div>
+    <div class="chips-block"><div class="h">Skills Applied</div><div class="chips">${skills}</div></div>
+    <div class="chips-block"><div class="h">Channels &amp; Tactics</div><div class="chips">${chans}</div></div>
+    <div class="cols">
+      <div class="panel resp"><div class="phead">Key Responsibilities</div>${resp}</div>
+      <div class="panel"><div class="phead">Key Results</div>${resultsHTML(p.results)}</div>
+    </div>
+    <div class="refs"><span class="rk">Link Reference</span>${refs}</div>
+  </article>`;
+}
+
+document.getElementById("proj-list").innerHTML = projects.map(projHTML).join("");
+</script>
+</body>
+</html>
